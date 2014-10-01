@@ -1,0 +1,2 @@
+collectgarbage()
+System.memclean()
