@@ -19,29 +19,29 @@ font:setPixelSizes(0,16)
 
 --Functions
 function printCenteredfont(y,text,color) 
-	local length = string.len(text) 
-	local x = 240 - ((length*8)/2) 
-	screen:fontPrint(font,x,y,text,color) 
+  local length = string.len(text) 
+  local x = 240 - ((length*8)/2) 
+  screen:fontPrint(font,x,y,text,color) 
 end 
 -----------
 
 while true do
-	screen:clear()
-	screen:blit(0,0,fond)
-	pad =Controls.read()
+  screen:clear()
+  screen:blit(0,0,fond)
+  pad =Controls.read()
 
-	printCenteredfont(75, "Utilisateur :"..nickname, Color.new(255,0,0))
-	printCenteredfont(90, "Adresse Mac :"..macadd, Color.new(255,0,0))
-	printCenteredfont(105, "Modele PSP :"..model, Color.new(255,0,0))
-	printCenteredfont(120, "Lua Player Version :"..sysver, Color.new(255,0,0))
-	printCenteredfont(135, "Custom Firmware Version:"..cfwver, Color.new(255,0,0))
-	printCenteredfont(150,"Espace Libre Sur La MS "..devid.." "..mssize.." Mb",Color.new(255,0,0))
-	printCenteredfont(195,"Temperature Batterie :"..temp.." C",Color.new(255,0,0))
-	printCenteredfont(210,"Temps Restant :"..lfetime.." min",Color.new(255,0,0))
+  printCenteredfont(75, "Utilisateur :"..nickname, Color.new(255,0,0))
+  printCenteredfont(90, "Adresse Mac :"..macadd, Color.new(255,0,0))
+  printCenteredfont(105, "Modele PSP :"..model, Color.new(255,0,0))
+  printCenteredfont(120, "Lua Player Version :"..sysver, Color.new(255,0,0))
+  printCenteredfont(135, "Custom Firmware Version:"..cfwver, Color.new(255,0,0))
+  printCenteredfont(150,"Espace Libre Sur La MS "..devid.." "..mssize.." Mb",Color.new(255,0,0))
+  printCenteredfont(195,"Temperature Batterie :"..temp.." C",Color.new(255,0,0))
+  printCenteredfont(210,"Temps Restant :"..lfetime.." min",Color.new(255,0,0))
 
-	if pad:start() then dofile ("menu.lua") end
+  if pad:start() then dofile ("menu.lua") end
 
-	screen.waitVblankStart()
-	screen.flip()
+  screen.waitVblankStart()
+  screen.flip()
 end
 
